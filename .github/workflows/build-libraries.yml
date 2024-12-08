@@ -45,7 +45,7 @@ jobs:
         cmake -S . -B build64_debug -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=1
         cmake --build build64_debug --config Debug
 
-    - uses: actions/Upload-artifact@v2
+    - uses: actions/Upload-artifact@v4
       with:
         name: v1.2.2 libraries linux
         path: |
@@ -58,7 +58,7 @@ jobs:
           open62541/build64_release/bin/
           open62541/build64_debug/bin/
           
-    - uses: actions/Upload-artifact@v2
+    - uses: actions/Upload-artifact@v4
       with:
         name: v1.2.2 tools directory (for generate_fpc)
         path: open62541/tools
@@ -105,7 +105,7 @@ jobs:
         cmake --build build64_debug --config Debug
         Rename-Item build64_debug/bin/Debug/open62541.dll libopen62541.dll
 
-    - uses: actions/Upload-artifact@v2
+    - uses: actions/Upload-artifact@v4
       with:
         name: v1.2.2 libraries windows
         path: |
